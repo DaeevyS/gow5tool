@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gears 5 Esports Coaching Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GEARS 5 ESPORTS COACHING TOOL</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-btn" onclick="changeMap()">MAPS</a></li>
+                <li><a href="#" class="nav-btn">TOOLS</a></li>
+                <li><a href="#" class="nav-btn" onclick="saveDrawing()">SAVE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="toolbar">
+            <button class="tool-btn" onclick="zoomIn()">Zoom In</button>
+            <button class="tool-btn" onclick="zoomOut()">Zoom Out</button>
+            <button class="tool-btn" onclick="selectTool('brush')">Brush</button>
+            <button class="tool-btn" onclick="selectTool('circle')">Circle</button>
+            <button class="tool-btn" onclick="selectTool('square')">Square</button>
+            <button class="tool-btn" onclick="selectTool('number', '1')">1</button>
+            <button class="tool-btn" onclick="selectTool('number', '2')">2</button>
+            <button class="tool-btn" onclick="selectTool('number', '3')">3</button>
+            <button class="tool-btn" onclick="selectTool('number', '4')">4</button>
+            <button class="tool-btn" onclick="selectTool('eraser')">Eraser</button>
+            <label for="colorPicker">Color:</label>
+            <input type="color" id="colorPicker" value="#000000" onchange="changeColor(this.value)">
+            <label for="brushSize">Size:</label>
+            <input type="number" id="brushSize" value="5" min="1" max="50" onchange="changeBrushSize(this.value)">
+        </div>
+        <div class="map-selector">
+            <select id="map-select" onchange="changeMap()">
+                <option value="map1">Regency</option>
+                <option value="map2">Clocktower</option>
+                <option value="map3">Vasgar</option>
+                <option value="map4">Training Grounds</option>
+                <option value="map5">District</option>
+                <option value="map6">Nexus</option>
+                <option value="map7">Ritual</option>
+                <option value="map8">Asylum</option>
+                <option value="map9">Tomb</option>
+                <option value="map10">Lift</option>
+                <option value="map11">Harbor</option>
+
+                <!-- Añade más opciones según sea necesario -->
+            </select>
+        </div>
+        <div class="canvas-container">
+            <canvas id="mapCanvas"></canvas>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

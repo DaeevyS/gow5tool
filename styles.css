@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'CGFLocustResistance';
+    src: url('fonts/CGFLocustResistance.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CGFLocustResistance', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: red;
+}
+
+p {
+    color: white;
+}
+
+header {
+    background-color: #111;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+    color: #ff0000;
+}
+
+main {
+    padding: 2rem;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px 0;
+}
+
+.tool-btn {
+    background-color: #333;
+    color: #fff; /* Color por defecto */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'CGFLocustResistance', sans-serif; /* Tipografía personalizada */
+    font-weight: normal; /* Por defecto */
+}
+
+.tool-btn.bold {
+    font-weight: bold; /* Negrita */
+}
+
+.tool-btn:hover {
+    background-color: #ff0000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#colorPicker, #brushSize {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+}
+
+.map-selector {
+    margin-bottom: 1rem;
+}
+
+#map-select {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    font-family: 'CGFLocustResistance', sans-serif;
+}
+
+.canvas-container {
+    display: inline-block;
+    border: 2px solid #ff0000;
+    margin-top: 20px;
+}
+
+#mapCanvas {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+/* Efecto de brillo para los botones */
+.tool-btn:hover, .nav-btn:hover {
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tool-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
